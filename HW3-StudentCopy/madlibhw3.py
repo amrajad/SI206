@@ -30,8 +30,9 @@ text2_str = ' '.join(text2)
 para = text2_str
 
 tokens = nltk.word_tokenize(para)
-print("TOKENS")
-print(tokens)
+#print("TOKENS")
+#print(tokens)
+tokens = tokens[:150]
 tagged_tokens = nltk.pos_tag(tokens) # gives us a tagged list of tuples
 print("TAGGED TOKENS")
 print(tagged_tokens)
@@ -40,8 +41,8 @@ if debug:
 	for tup in tagged_tokens[:5]:
 		print (tup)
 
-tagmap = {"NN":"a noun","NNS":"a plural noun","VB":"a verb","JJ":"an adjective","NUM":"a number"}
-substitution_probabilities = {"NN":.15,"NNS":.1,"VB":.1,"JJ":.1,"NUM":.1}
+tagmap = {"NN":"a noun","NNS":"a plural noun","VB":"a verb","JJ":"an adjective","NNP":"a name"}
+substitution_probabilities = {"NN":.15,"NNS":.1,"VB":.1,"JJ":.1,"NNP":.1}
 
 def spaced(word):
 	if word in [",", ".", "?", "!", ":"]:
