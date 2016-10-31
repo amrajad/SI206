@@ -18,13 +18,17 @@ from nltk import word_tokenize,sent_tokenize
 
 debug = False #True
 
-# get file from user to make mad lib out of
-if debug:
-	print ("Getting information from file madlib_test.txt...\n")
-fname = "madlibtest2.txt" # need a file with this name in directory
+# # get file from user to make mad lib out of
+# if debug:
+# 	print ("Getting information from file madlib_test.txt...\n")
+# fname = "madlibtest2.txt" # need a file with this name in directory
 
-f = open(fname, 'r')
-para = f.read()
+# f = open(fname, 'r')
+# para = f.read()
+
+text2_str = ' '.join(text2)
+para = text2_str
+
 tokens = nltk.word_tokenize(para)
 print("TOKENS")
 print(tokens)
