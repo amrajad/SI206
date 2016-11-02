@@ -31,3 +31,5 @@ for img in img_tags:
 	local_img = img.replace_with(str('<')+'img src ="file:///Users/AditiRajadhyaksha/Desktop/project3/HW3-StudentCopy/media/logo.png"'+str('/>'))
 
 print(soup.prettify())
+
+#class for main image: class="ytp-thumbnail-overlay ytp-cued-thumbnail-overlay"
