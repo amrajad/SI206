@@ -25,3 +25,5 @@ find_student = soup.find_all(text = re.compile('student'))
 for student in find_student:
 	AMAZING_student = str(student).replace('student', 'AMAZING student')
 	student.replace_with(AMAZING_student)
+
+print(soup.prettify())
