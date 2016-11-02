@@ -12,11 +12,16 @@
 # Make sure the new page is uploaded to your GitHub account.
 
 import urllib.request, urllib.parse, urllib.error
+import re
 import requests
+import unicodedata
 from bs4 import BeautifulSoup
 
-url = https://www.si.umich.edu/programs/bachelor-science-information/bsi-admissions
+url = 'https://www.si.umich.edu/programs/bachelor-science-information/bsi-admissions'
 r = requests.get(url)
 soup = BeautifulSoup(r.text, "html.parser")
 
-for tags in soup:
+find_student = soup.find_all(text = re.compile('student'))
+for student in find_student:
+	AMAZING_student = str(student).replace('student', 'AMAZING student')
+	student.replace_with(AMAZING_student)
