@@ -27,7 +27,10 @@ for student in find_student:
 	AMAZING_student = str(student).replace('student', 'AMAZING student')
 	student.replace_with(AMAZING_student)
 
-#2
+# # #2
+# #class for main image: class="ytp-thumbnail-overlay ytp-cued-thumbnail-overlay"
+# for main_img in soup.find_all(class_="ytp-thumbnail-overlay"):
+# 	my_img = main_img.replace_with('<img src="file:///Users/AditiRajadhyaksha/Desktop/project3/HW3-StudentCopy/media/my_headshot.jpg"/>')
 
 #3
 img_tags = soup('img')
@@ -41,4 +44,3 @@ print(soup.prettify(formatter=None)) #This prints the index.html code
 
 
 
-#class for main image: class="ytp-thumbnail-overlay ytp-cued-thumbnail-overlay"
