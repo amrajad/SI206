@@ -19,4 +19,4 @@ url = https://www.si.umich.edu/programs/bachelor-science-information/bsi-admissi
 r = requests.get(url)
 soup = BeautifulSoup(r.text, "html.parser")
 
-for 
+for tags in soup:
