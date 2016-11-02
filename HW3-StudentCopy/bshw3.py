@@ -26,4 +26,8 @@ for student in find_student:
 	AMAZING_student = str(student).replace('student', 'AMAZING student')
 	student.replace_with(AMAZING_student)
 
+img_tags = soup('img')
+for img in img_tags:
+	local_img = img.replace_with(str('<')+'img src ="file:///Users/AditiRajadhyaksha/Desktop/project3/HW3-StudentCopy/media/logo.png"'+str('/>'))
+
 print(soup.prettify())
