@@ -28,9 +28,9 @@ for student in find_student:
 	student.replace_with(AMAZING_student)
 
 #2
-#class for main image: class="ytp-thumbnail-overlay ytp-cued-thumbnail-overlay"
-for main_img in soup.find_all(class_="ytp-thumbnail-overlay"):
-	my_img = main_img.replace_with('<img src="file:///Users/AditiRajadhyaksha/Desktop/project3/HW3-StudentCopy/media/my_headshot.jpg"/>')
+iframe_tags = soup('iframe')
+for iframe in iframe_tags:
+	iframe.replace_with('<iframe allowfullscreen="" frameborder="0" height="315" src="https://pbs.twimg.com/profile_images/734949358161035265/H1U0sj3w.jpg" width="560">')	
 
 #3
 img_tags = soup('img')
