@@ -30,7 +30,7 @@ for student in find_student:
 #2
 iframe_tags = soup('iframe')
 for iframe in iframe_tags:
-	iframe.replace_with('<iframe allowfullscreen="" frameborder="0" height="315" src="https://pbs.twimg.com/profile_images/734949358161035265/H1U0sj3w.jpg" width="560">')	
+	iframe.replace_with('<iframe allowfullscreen="" frameborder="0" height="315" src="https://pbs.twimg.com/profile_images/734949358161035265/H1U0sj3w.jpg" width="560"></iframe>')	
 
 #3
 img_tags = soup('img')
