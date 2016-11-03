@@ -18,24 +18,16 @@ from nltk import word_tokenize,sent_tokenize
 
 debug = False #True
 
-# # get file from user to make mad lib out of
-# if debug:
-# 	print ("Getting information from file madlib_test.txt...\n")
-# fname = "madlibtest2.txt" # need a file with this name in directory
-
-# f = open(fname, 'r')
-# para = f.read()
-
 text2_str = ' '.join(text2)
 para = text2_str
 
 tokens = nltk.word_tokenize(para)
-#print("TOKENS")
-#print(tokens)
 tokens = tokens[:150]
+print("TOKENS")
+print(" ".join(tokens))
 tagged_tokens = nltk.pos_tag(tokens) # gives us a tagged list of tuples
-print("TAGGED TOKENS")
-print(tagged_tokens)
+#print("TAGGED TOKENS")
+#print(tagged_tokens)
 if debug:
 	print ("First few tagged tokens are:")
 	for tup in tagged_tokens[:5]:
