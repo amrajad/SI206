@@ -42,8 +42,6 @@ message = soup.prettify(formatter=None)
 f.write(message)
 f.close()
 
-#print(soup.prettify(formatter=None)) #This prints the index.html code
-
 
 
 
