@@ -23,7 +23,7 @@ auth.set_access_token(access_token,access_token_secret)
 api = tweepy.API(auth)
 #Now we can Create Tweets, Delete Tweets, and Find Twitter Users
 
-public_tweets = api.search('"Gilmore Girls" @netflix')
+public_tweets = api.search('"Trump" @HillaryClinton')
 
 total_polarity = 0.0
 total_subjectivity = 0.0
@@ -31,14 +31,13 @@ count = 0
 for tweet in public_tweets:
 	print(tweet.text)
 	analysis = TextBlob(tweet.text)
-	print(analysis.sentiment) #Sentiment(polarity=0.4681818181818182, subjectivity=0.6022727272727273)
 	
 	sub_and_pol = str(analysis.sentiment)
 
-	tweet_sentiment_polarity = re.findall('polarity=[\d].[\d]+', sub_and_pol)
+	tweet_sentiment_polarity = re.findall('polarity=\-?[\d].[\d]+', sub_and_pol)
 	string, polarity = tweet_sentiment_polarity[0].split('=')
 
-	tweet_sentiment_subjectivity = re.findall('subjectivity=[\d].[\d]+', sub_and_pol)
+	tweet_sentiment_subjectivity = re.findall('subjectivity=\-?[\d].[\d]+', sub_and_pol)
 	string, subjectivity = tweet_sentiment_subjectivity[0].split('=')
 	
 	count += 1
