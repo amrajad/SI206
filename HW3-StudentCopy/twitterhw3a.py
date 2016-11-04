@@ -3,10 +3,10 @@
 # hashtags #UMSI-206 #Proj3 in the tweet.
 
 # You will demo this live for grading.
-OAUTH_TOKEN = "726175519004205056-FafWgRYKWqcmW8aO7uhmrk8g2dEls3E"
-OAUTH_TOKEN_SECRET = "sLkovs0k8i58V7pfFCxM9k2m511BQwSdAdA8M6qNsuxGu"
-APP_KEY = "ykGXCbMxJqqMZWY3Ca5LKtawS"
-APP_SECRET = "83DgYkMS3IPsfnyqpBVOjCBzzcHUIv3tARnP7kWLjzZLz0bm9o"
+OAUTH_TOKEN = 'XXX'
+OAUTH_TOKEN_SECRET = 'XXX'
+APP_KEY = 'XXX'
+APP_SECRET = 'XXX'
 
 
 from twython import Twython
