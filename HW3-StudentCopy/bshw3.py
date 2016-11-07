@@ -35,7 +35,7 @@ for iframe_tag in iframe_tags:
 #3
 img_tags = soup('img')
 for img in img_tags:
-	local_img = img.replace_with('<img src ="file:///Users/AditiRajadhyaksha/Desktop/project3/HW3-StudentCopy/media/logo.png"/>')
+	img.replace_with('<img src ="file:///Users/AditiRajadhyaksha/Desktop/project3/HW3-StudentCopy/media/logo.png"/>')
 
 f = open('index.html','w')
 message = soup.prettify(formatter=None)
